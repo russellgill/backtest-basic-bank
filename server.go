@@ -18,8 +18,13 @@ var Collection string
 var Records string
 var client *mongo.Client
 
+type Server struct {
+	URL	      string
+	Port          string
+}
+
 type Record struct{
-	Identifier	  string `bson: Identifier`
+	Identifier    string `bson: Identifier`
 	Transaction   string `bson: Transaction`
 	Balance       string `bson: Balance`
 	Change        string `bson: Change`
